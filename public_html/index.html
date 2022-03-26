@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Docuras da Jó</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/header.css">
+
+        <link rel="stylesheet" href="css/gallery.theme.css">
+        <link rel="stylesheet" href="css/gallery.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <style type="text/css">
+
+        </style>
+
+
+
+    </head>
+
+    <body>
+
+        <!-- Star Header -->
+
+
+
+
+
+
+
+        <div class="logomarca">
+            <img src="img/logomarca.png" hspace="430px" alt="some text" width=450 height=350>
+        </div>
+
+        <nav id="menu-h">
+            <ul>
+                <li><a href="index.html"> Home </a> </li>
+
+                <li><a href="index.html">Sobre</a></li>
+
+                <li><a href="index.html">Quem Somos</a></li>
+
+                <li><a href="index.html">Contato</a></li>
+
+                <li><a href="index.html">Administrador</a></li>
+            </ul>
+        </nav>
+
+        <div id="abrir" class="modal">
+            <a href="#fechar" class="fechar"> X </a>
+
+            <div class="container">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h3>Fale Conosco</h3> 
+                    <input type="text" id="name" placeholder="Seu Nome" required="">
+                    <input type="email" id="email" placeholder="Seu Email" required="">
+                    <input type="text" id="phone" placeholder="Seu Telefone" required="">
+                    <textarea id="message" rows="4" placeholder="Digite aqui"></textarea>
+                    <button type="submit"> Enviar </button>
+
+                </form>
+            </div>
+
+        </div>    
+
+
+
+        <!-- End Header -->
+
+
+
+        <!-- Star Body -->
+        <div class="body">
+            <div class="gallery autoplay items-3">
+
+                <div id="item-1" class="control-operator"></div>
+                <div id="item-2" class="control-operator"></div>
+                <div id="item-3" class="control-operator"></div>
+
+                <figure class="item">
+                    <h1><img src="img/slide01.jpg"></h1>
+                </figure>
+
+                <figure class="item">
+                    <h1><img src="img/slide02.jpg"></h1>
+                </figure>
+
+                <figure class="item">
+                    <h1><img src="img/slide03.jpg"></h1>
+                </figure>
+
+                <div class="controls">
+                    <a href="#item-1" class="control-button">.</a>
+                    <a href="#item-2" class="control-button">.</a>
+                    <a href="#item-3" class="control-button">.</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <center><h2>Fale Conosco</h2></center>
+                <input type="text" id="name" placeholder="Seu Nome" required="">
+                <input type="email" id="email" placeholder="Seu Email" required="">
+                <input type="text" id="phone" placeholder="Seu Telefone" required="">
+                <textarea id="message" rows="4" placeholder="Digite aqui"></textarea>
+                <button type="submit"> Enviar </button>
+
+            </form>
+        </div>
+
+
+
+        <script src="https://smtpjs.com/v3/smtp.js" ></script>
+        <script >
+                function sendEmail() {
+                    Email.send({
+                    Host : "smtp.gmail.com",
+                            Username : "xxxxxxx",
+                            Password : "xxxxxxx",
+                            To : 'xxxxxxx',
+                            From : document.getElementById("email").value,
+                            Subject : "Novo contato",
+                            Body : "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value + "<br> Phone: " + document.getElementById("phone").value + "<br> Message: " + document.getElementById("message").value
+                            message => alert("Enviado com Sucesso")
+                            );
+                }
+
+        </script>
+    </body>
+</html>
