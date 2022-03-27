@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=netbeans
 
 ### NetBeans ###
-**/nbproject/private/
+**/nbproject/private/*
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
 build/
