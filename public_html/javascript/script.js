@@ -37,3 +37,27 @@ function sendEmail (data) {
     document.location.reload()
   })
 }
+
+
+function login (data) {
+  Email.send({
+    Host: 'smtp.mailtrap.io',
+    Username: '6403e73be8cadc',
+    Password: '898f9f70007d95',
+    To: 'to@example.com',
+    From: data.email,
+    Subject: 'Novo contato',
+    Body:
+      'Name: ' +
+      data.name +
+      '<br> Email: ' +
+      data.email +
+      '<br> Phone: ' +
+      data.phone +
+      '<br> Message: ' +
+      data.message,
+  }).then((message) => {
+    window.alert('Mensagem enviada')
+    document.location.reload()
+  })
+}
